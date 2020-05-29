@@ -10,16 +10,16 @@ function setup() {
   engine=Engine.create();
   world=engine.world;
 
-  b1 = new Block(605,235,30,30,"blue");
-  b2 = new Block(635,235,30,30,"blue");
-  b3 = new Block(665,235,30,30,"blue");
-  b4 = new Block(695,235,30,30,"blue");
-  b5 = new Block(620,205,30,30,"red");
-  b6 = new Block(650,205,30,30,"red");
-  b7 = new Block(680,205,30,30,"red");
-  b8 = new Block(635,175,30,30,(225,192,203));
-  b9 = new Block(665,175,30,30,(225,192,203));
-  b10 = new Block(650,145,30,30,(185,241,92));
+  b1 = new Block(605,250,30,30,"blue");
+  b2 = new Block(635,250,30,30,"blue");
+  b3 = new Block(665,250,30,30,"blue");
+  b4 = new Block(695,250,30,30,"blue");
+  b5 = new Block(620,220,30,30,"red");
+  b6 = new Block(650,220,30,30,"red");
+  b7 = new Block(680,220,30,30,"red");
+  b8 = new Block(635,190,30,30,(225,192,203));
+  b9 = new Block(665,190,30,30,(225,192,203));
+  b10 = new Block(650,160,30,30,(185,241,92));
 
   ground = new Ground(400,395,800,10);
 
@@ -33,6 +33,7 @@ function setup() {
 }
 
 function draw() {
+  Engine.update(engine);
   background("black");  
 
   ground.display();

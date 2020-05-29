@@ -13,7 +13,7 @@ class Block{
       display(){
         var pos = this.body.position;
         console.log(this.body.speed);
-        if (this.body.speed < 10) {
+        if (this.body.speed < 5){
         rectMode(CENTER);
         fill(this.fill);
         rect(pos.x,pos.y,this.width,this.height);        
@@ -21,12 +21,12 @@ class Block{
         else{
           World.remove(world,this.body);
           var pos = this.body.position;
-          this.Visibility=this.Visibility-5;
           push();
+          this.Visibility=this.Visibility-5;
+          pop();
           tint(255,this.Visibility);
           fill(this.fill);
           rect(pos.x,pos.y,this.width,this.height);
-          pop();
         }
       }
 }
